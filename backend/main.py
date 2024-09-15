@@ -33,9 +33,8 @@ def get_items():
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        # "http://localhost:5173",
+	"http://localhost:5173",
         "http://87.228.13.118",
-        #"https://site-test-deploy1.ru",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -44,4 +43,4 @@ app.add_middleware(
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
